@@ -67,8 +67,16 @@ public class App {
         var control3 = new TextBox();
         show(control3);// TextBox
         // Downcasting : casting a base class to a derived class
-        var control4 = new UIControl(true);
+        var control4 = new UIControl();
         show(control4);
+
+
+        // Polymorphism : many forms 
+        System.out.println("Polymorphism");
+        UIControl[] controls = {new TextBox(), new CheckBox()};
+        for (var c : controls) {
+            c.render();
+        }
     }
 
     public static void show(UIControl control) {

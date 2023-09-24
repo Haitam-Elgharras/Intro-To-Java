@@ -14,11 +14,9 @@ public class Point {
         if (this == obj)
             return true;
 
-        if (obj == null)
+        if (obj == null || getClass() != obj.getClass())
             return false;
-
-        if (getClass() != obj.getClass())
-            return false;
+            
         // downcasting
         Point other = (Point) obj;
         if (x != other.x || y != other.y)
