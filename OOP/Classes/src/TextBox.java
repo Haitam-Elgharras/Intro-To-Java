@@ -1,4 +1,4 @@
-public class TextBox extends UIControl {
+public final class TextBox extends UIControl {
 
     public String text=""; // field
 

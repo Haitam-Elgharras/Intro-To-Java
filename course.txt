@@ -60,9 +60,16 @@
         reuse code without having to rewrite the same code in multiple places. In Java, inheritance is achieved through the use of the
         extends keyword.
 
-        1. if the base class doesn't have a no-arg constructor, then the derived class must explicitly call one of the constructors
+        Note: if the base class doesn't have a no-arg constructor, then the derived class must explicitly call one of the constructors
             defined in the base class using the super keyword and passing the appropriate arguments and it must be the first statement.
 
+    4. Polymorphism: (achieved through inheritance and method overriding)
+        In the context of OOP, polymorphism refers to the ability of different objects to respond to the same method or message
+        in a way that is specific to their individual types or classes. It allows objects of different classes to be treated as
+        objects of a common superclass. 
+        When a subclass inherits from a superclass, it can override methods in the superclass to provide its own implementation
+        of those methods. This means that objects of the subclass can be treated as if they are objects of the superclass,
+        because they have the same methods with the same signatures.
     
     
 
@@ -101,7 +108,28 @@
         Downcasting is also known as narrowing or specialization. Downcasting is not safe because the parent class object 
         may not have all the features of the child class object. Downcasting is used when we want to treat a single child 
         object in a special way. Downcasting is used to access the specific features of the child class object.
-    
 
+
+    # Absract classes and methods:
+    1. Abstract class: An abstract class is a class that is declared abstract—it may or may not include abstract methods.
+        Abstract classes cannot be instantiated, but they can be subclassed. An abstract class may have static fields and
+        static methods. You can use abstract keyword to create an abstract class.
+    2. abstract methods: 
+        - an abstract method is a method that is declared without an implementation (without braces, and
+        followed by a semicolon), like this: abstract void moveTo(double deltaX, double deltaY); If a class includes abstract
+        methods, then the class itself must be declared abstract, as in: public abstract class GraphicObject { // declare fields
+        // declare nonabstract methods abstract void draw(); }
+       - an abstract method must obligatorily be overridden in the subclass, or else the subclass must also be declared abstract
+        and it's the responsibility of the next subclass to override the abstract method.
+
+
+    # Final Classes and methods:
+    1.  A final class is a class that cannot be extended or subclassed. You cannot create a subclass of a final class.
+    It is often used when you want to prevent any further specialization or inheritance of a class.
+    Final classes are sometimes used for security or optimization reasons, and they are often found in core Java classes like String and Integer.
+
+    2. A final method is a method that cannot be overridden by subclasses. When you declare a method as final, 
+       it means that no subclass can provide a different implementation for that method.
+       Final methods are commonly used to enforce a specific behavior in a class and prevent subclasses from altering that behavior.
 
     

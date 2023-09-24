@@ -1,4 +1,4 @@
-public class UIControl {
+public abstract class UIControl {
 
     private boolean isEnabled = true;
 
@@ -7,7 +7,7 @@ public class UIControl {
     //     System.out.println("UIControl");
     // }
 
-    public void render(){};
+    public abstract void render();
 
     public void enable() {
         isEnabled = true;
@@ -15,7 +15,7 @@ public class UIControl {
     public void disable() {
         isEnabled = false;
     }
-    public boolean isEnabled() {
+    public final boolean isEnabled() {
         return isEnabled;
     }
 
