@@ -1,0 +1,107 @@
+#some information about java
+    1. Java is a high-level, object-oriented, general-purpose programming language. It was designed by James Gosling
+       in 1995, at Sun Microsystems. later it was acquired by Oracle Corporation in 2010.
+
+    2. Java is a platform-independent language. It means that Java code can run on any platform that has a Java Virtual Machine (JVM) installed.
+
+    3. the first name of java was Oak, but it was already a trademarked name, so it was changed to Java inspired by the name of coffee. 
+
+#some terms are closely related and are essential in Java development and execution
+
+    1. **JDK (Java Development Kit):** The JDK is a software package that includes tools for developing Java applications. 
+        It contains the Java compiler (`javac`), libraries, and documentation. It is used by developers to create, compile, 
+        and package Java programs.it contains all the functionality of JRE.
+
+    2. **JRE (Java Runtime Environment):** The JRE is a software package that includes the Java Virtual Machine (JVM) along
+        with libraries and runtime components. It is used for running Java applications. Users who want to run Java programs
+        install the JRE.
+
+    3. **JVM (Java Virtual Machine):** The JVM is a part of both the JDK and JRE. It's responsible for executing Java bytecode
+        on a computer. It converts(interprets or compiles) bytecode into native machine code, depending on the implementation. It ensures
+        platform independence by allowing Java programs to run on different systems.
+
+    4. **JIT (Just-In-Time) Compiler:** The JIT compiler is a component of the JVM. It translates Java bytecode into native 
+        machine code at runtime, right before execution. This optimization can improve the performance of Java applications.
+
+    5. **Bytecode:** Bytecode is an intermediate representation of Java source code. It's a low-level set of instructions that
+        the JVM can understand. Java source code is compiled into bytecode (.class files), which can be executed by the JVM.
+
+
+# How java code gets executed
+
+    1. **Compilation:** Java Compiler's Role: The Java compiler, which is part of the JDK, is responsible for translating 
+        the human-readable Java source code (contained in .java files) into platform-independent bytecode. When you use the javac
+        command, you are instructing the Java compiler to perform this translation. The compiler checks your code for syntax 
+        errors and ensures it adheres to Java's rules.
+
+    2. **Class Loading:** The Java Virtual Machine (JVM part of JDK) loads the compiled `.class` file into memory.
+
+    3. **Bytecode Verification:** JVM checks the bytecode for safety and adherence to Java rules.
+
+    4. **Just-In-Time (JIT) Compilation:** Optionally, the JVM converts bytecode to native machine code for better execution speed.
+
+    5. **Execution:** The JVM begins executing the bytecode, starting with the `main` method.
+
+
+    # OOP :
+    1. **Encapsulation:** :Encapsulation is one of the four fundamental OOP concepts (along with inheritance, polymorphism, and abstraction)
+     and involves bundling the data (attributes) and the methods (functions) that operate on the data into a single unit called a class.
+     It is often described as "data hiding" because it restricts access to the internal state of an object from the outside.
+     In Java, encapsulation is achieved through the use of access modifiers like private, public, protected, and package-private (default).
+
+    2. **Abstraction** : Abstraction is the process of simplifying complex reality by modeling classes based on the essential
+        properties and behaviors they exhibit. It allows you to hide the implementation details and show only the necessary features
+        of an object. In Java, abstraction is achieved through the use of abstract classes and interfaces.
+
+    
+
+    3. **Inheritance** : Inheritance is the process of creating new classes from existing classes. The new classes, known as derived classes,
+        inherit the properties and behaviors of the pre-existing classes, which are referred to as base classes. Inheritance allows you to
+        reuse code without having to rewrite the same code in multiple places. In Java, inheritance is achieved through the use of the
+        extends keyword.
+
+        1. if the base class doesn't have a no-arg constructor, then the derived class must explicitly call one of the constructors
+            defined in the base class using the super keyword and passing the appropriate arguments and it must be the first statement.
+
+    
+    
+
+    # Access Modifiers: Four Types of Access Modifiers
+    1. Private: We can access the private modifier only within the same class and not from outside the class.
+
+    2. Default: We can access the default modifier only within the same package and not from outside the package even from
+     the child class.And also,if we do not specify any access modifier it will automatically consider it as default.
+
+    3. Protected: We can access the protected modifier within the same package and also from outside the package with the help
+     of the child class. If we do not make the child class, we cannot access it from outside the package. So inheritance is
+     a must for accessing it from outside the package.
+
+    4. Public: We can access the public modifier from anywhere. We can access public modifiers from within the class
+       as well as from outside the class and also within the package and outside the package.
+
+    
+    # Method Overriding:
+     Method overriding is a feature that allows a subclass or child class to provide a specific implementation of a method
+        that is already provided by one of its superclasses or parent classes. When a method in a subclass has the same name,
+        same parameters or signature, and same return type(or sub-type) as a method in its super-class, then the method in the
+        subclass is said to override the method in the super-class.
+
+
+    # Upcasting and Downcasting (generalization and specification)
+    
+    1. Upcasting: Upcasting is the typecasting of a child object to a parent object. Upcasting is done implicitly. 
+        Upcasting is also known as widening or generalization. Upcasting is always safe because the child class object 
+        has all the features of the parent class object. Upcasting is used when we want to treat a group of child objects 
+        in a similar way. Upcasting is used to create a collection of different types of objects.
+
+    **Note:** when dealing with upcasting, at compile time we don't have access to the child class members, unless we downcast it.
+               but at runtime, we have access to the child class members.
+
+    2. Downcasting: Downcasting is the typecasting of a parent object to a child object. Downcasting is done explicitly.
+        Downcasting is also known as narrowing or specialization. Downcasting is not safe because the parent class object 
+        may not have all the features of the child class object. Downcasting is used when we want to treat a single child 
+        object in a special way. Downcasting is used to access the specific features of the child class object.
+    
+
+
+    
