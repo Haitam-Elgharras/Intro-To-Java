@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/Classes/Classes.iml" filepath="$PROJECT_DIR$/Classes/Classes.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Interfaces/Interfaces.iml" filepath="$PROJECT_DIR$/Interfaces/Interfaces.iml" />
+      <module fileurl="file://$PROJECT_DIR$/InterfacesProject/InterfacesProject.iml" filepath="$PROJECT_DIR$/InterfacesProject/InterfacesProject.iml" />
+      <module fileurl="file://$PROJECT_DIR$/MortgageProject/MortgageProject.iml" filepath="$PROJECT_DIR$/MortgageProject/MortgageProject.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/OOP.iml" filepath="$PROJECT_DIR$/.idea/OOP.iml" />
+      <module fileurl="file://$PROJECT_DIR$/TestJavaProtected/TestJavaProtected.iml" filepath="$PROJECT_DIR$/TestJavaProtected/TestJavaProtected.iml" />
+    </modules>
+  </component>
+</project>
