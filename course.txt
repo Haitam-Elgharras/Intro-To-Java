@@ -16,22 +16,22 @@
         with libraries and runtime components. It is used for running Java applications. Users who want to run Java programs
         install the JRE.
 
-    3. **JVM (Java Virtual Machine):** The JVM is a part of both the JDK and JRE. It's responsible for executing Java bytecode
+    3. **JVM (Java Virtual Machine):** The JVM is a part of both the JDK and JRE. It's responsible for interpreting Java bytecode
         on a computer. It converts(interprets or compiles) bytecode into native machine code, depending on the implementation. It ensures
         platform independence by allowing Java programs to run on different systems.
 
-    4. **JIT (Just-In-Time) Compiler:** The JIT compiler is a component of the JVM. It translates Java bytecode into native 
+    4. **JIT (Just-In-Time) Compiler:** The JIT compiler is a component of the JVM. It translates Java bytecode into native
         machine code at runtime, right before execution. This optimization can improve the performance of Java applications.
 
     5. **Bytecode:** Bytecode is an intermediate representation of Java source code. It's a low-level set of instructions that
-        the JVM can understand. Java source code is compiled into bytecode (.class files), which can be executed by the JVM.
+        the JVM can understand. Java source code is compiled into bytecode (.class files), which can be executed(interpreted) by the JVM.
 
 
 # How java code gets executed
 
-    1. **Compilation:** Java Compiler's Role: The Java compiler, which is part of the JDK, is responsible for translating 
+    1. **Compilation:** Java Compiler's Role: The Java compiler, which is part of the JDK, is responsible for translating
         the human-readable Java source code (contained in .java files) into platform-independent bytecode. When you use the javac
-        command, you are instructing the Java compiler to perform this translation. The compiler checks your code for syntax 
+        command, you are instructing the Java compiler to perform this translation. The compiler checks your code for syntax
         errors and ensures it adheres to Java's rules.
 
     2. **Class Loading:** The Java Virtual Machine (JVM part of JDK) loads the compiled `.class` file into memory.
@@ -53,8 +53,6 @@
         properties and behaviors they exhibit. It allows you to hide the implementation details and show only the necessary features
         of an object. In Java, abstraction is achieved through the use of abstract classes and interfaces.
 
-    
-
     3. **Inheritance** : Inheritance is the process of creating new classes from existing classes. The new classes, known as derived classes,
         inherit the properties and behaviors of the pre-existing classes, which are referred to as base classes. Inheritance allows you to
         reuse code without having to rewrite the same code in multiple places. In Java, inheritance is achieved through the use of the
@@ -66,12 +64,12 @@
     4. Polymorphism: (achieved through inheritance and method overriding)
         In the context of OOP, polymorphism refers to the ability of different objects to respond to the same method or message
         in a way that is specific to their individual types or classes. It allows objects of different classes to be treated as
-        objects of a common superclass. 
+        objects of a common superclass.
         When a subclass inherits from a superclass, it can override methods in the superclass to provide its own implementation
         of those methods. This means that objects of the subclass can be treated as if they are objects of the superclass,
         because they have the same methods with the same signatures.
-    
-    
+
+
 
     # Access Modifiers: Four Types of Access Modifiers
     1. Private: We can access the private modifier only within the same class and not from outside the class.
@@ -86,7 +84,7 @@
     4. Public: We can access the public modifier from anywhere. We can access public modifiers from within the class
        as well as from outside the class and also within the package and outside the package.
 
-    
+
     # Method Overriding:
      Method overriding is a feature that allows a subclass or child class to provide a specific implementation of a method
         that is already provided by one of its superclasses or parent classes. When a method in a subclass has the same name,
@@ -95,26 +93,26 @@
 
 
     # Upcasting and Downcasting (generalization and specification)
-    
-    1. Upcasting: Upcasting is the typecasting of a child object to a parent object. Upcasting is done implicitly. 
-        Upcasting is also known as widening or generalization. Upcasting is always safe because the child class object 
-        has all the features of the parent class object. Upcasting is used when we want to treat a group of child objects 
+
+    1. Upcasting: Upcasting is the typecasting of a child object to a parent object. Upcasting is done implicitly.
+        Upcasting is also known as widening or generalization. Upcasting is always safe because the child class object
+        has all the features of the parent class object. Upcasting is used when we want to treat a group of child objects
         in a similar way. Upcasting is used to create a collection of different types of objects.
 
     **Note:** when dealing with upcasting, at compile time we don't have access to the child class members, unless we downcast it.
                but at runtime, we have access to the child class members.
 
     2. Downcasting: Downcasting is the typecasting of a parent object to a child object. Downcasting is done explicitly.
-        Downcasting is also known as narrowing or specialization. Downcasting is not safe because the parent class object 
-        may not have all the features of the child class object. Downcasting is used when we want to treat a single child 
+        Downcasting is also known as narrowing or specialization. Downcasting is not safe because the parent class object
+        may not have all the features of the child class object. Downcasting is used when we want to treat a single child
         object in a special way. Downcasting is used to access the specific features of the child class object.
 
 
-    # Absract classes and methods:
+    # Abstract classes and methods:
     1. Abstract class: An abstract class is a class that is declared abstract—it may or may not include abstract methods.
         Abstract classes cannot be instantiated, but they can be subclassed. An abstract class may have static fields and
         static methods. You can use abstract keyword to create an abstract class.
-    2. abstract methods: 
+    2. abstract methods:
         - an abstract method is a method that is declared without an implementation (without braces, and
         followed by a semicolon), like this: abstract void moveTo(double deltaX, double deltaY); If a class includes abstract
         methods, then the class itself must be declared abstract, as in: public abstract class GraphicObject { // declare fields
@@ -128,8 +126,70 @@
     It is often used when you want to prevent any further specialization or inheritance of a class.
     Final classes are sometimes used for security or optimization reasons, and they are often found in core Java classes like String and Integer.
 
-    2. A final method is a method that cannot be overridden by subclasses. When you declare a method as final, 
+    2. A final method is a method that cannot be overridden by subclasses. When you declare a method as final,
        it means that no subclass can provide a different implementation for that method.
        Final methods are commonly used to enforce a specific behavior in a class and prevent subclasses from altering that behavior.
 
-    
+
+
+    # interfaces: interface in Java is like a contract or a set of rules that a class can agree to follow. When a class implements
+    an interface, it promises to provide specific behaviors that the interface defines, but it's up to the class to determine how
+    those behaviors are implemented.
+
+    Here's a breakdown:
+    - Contract: An interface defines a list of method signatures (the names of methods and their parameters) that a class must provide.
+      It's like saying, "If you want to be part of this group, you need to have these methods."
+    - Promise: When a class implements an interface, it agrees to fulfill the promise made by the interface. This means the class must
+      provide actual code for all the methods specified in the interface.
+    - Flexibility: Multiple classes can implement the same interface, and each class can implement the interface's methods in its
+      unique way. It's like different classes following the same rules but doing things differently based on their needs.
+    - Polymorphism: Interfaces allow you to work with objects of different classes in a uniform way if they implement the same
+      interface. You can call methods specified by the interface on these objects, even though they belong to different classes.
+    - an interface can have multiple parent interfaces, but a class can only extend one class. cause for interfaces, if the two
+        parent interfaces have the same method signature, then the child interface will have only one method.
+
+
+    # Dependency Injection: in Java is a concept where you provide a class with the things it needs to work,
+    either when you create it, through special methods, or after it's created. It's like giving a chef their
+    cooking tools, a car its parts, or a carpenter the right tools for a job. This makes your code more flexible
+    and easier to maintain because you can change those tools without changing the class itself.
+
+    **Dependency Injection in Java makes our code loosely coupled, which means that classes are not tightly connected
+    to each other. Instead, they rely on external components provided to them. This promotes flexibility and easier maintenance.
+    For projects with a large number of classes and complex dependencies, frameworks like Spring are used. These frameworks
+    simplify dependency injection by managing the creation and injection of dependencies automatically, reducing
+    the manual effort required to wire up components.
+
+    ** Interface Segregation Principle: it's about devising interfaces that are specific to the needs of the client.
+    It's better to have many smaller interfaces than a few larger ones. This way, our classes are not forced to implement
+    many methods that they don't need. This principle is closely related to the Single Responsibility Principle (SRP),
+
+    ** Bad features have been add to java Interfaces :
+      1. fields: in the new versions of java, we can add fields to interfaces, but we should avoid them.
+      2. we can add static and private methods to interfaces, but we should avoid them cause interfaces are
+         about what not how
+
+
+    ** Interview Question : what is the difference between abstract classes and interfaces?
+
+      *. Abstract Classes: These are partially implemented classes that allow code sharing and provide a blueprint
+         for class structure and behavior while Interfaces are Contracts that classes must adhere to, specifying required
+         methods without dictating their implementation. This promotes loose coupling between classes.
+
+      *. With Java's newer features, interfaces can provide default behavior, blurring the line between them and abstract
+         classes. However, the fundamental difference remains: interfaces focus on "what," while abstract classes can
+         provide some "how."
+
+    ** The benefits of Interfaces:
+    1. Swap Implementation: Interfaces allow you to swap implementations. For example, if you're using a database
+       to store data, you can easily swap it out for a different database without changing your code. This is because
+       your code only interacts with the database through the interface, not the implementation.
+
+    2. Extendability: Interfaces allow you to add new features to your application without breaking existing code.
+       For example, if you need to add a new type of database, you can create a new class that implements the database
+       with less or 0 impact on the existing code.
+
+    3. Test your classes in isolation: Interfaces allow you to test your classes in isolation. For example, if you
+       have a class that depends on a database, you can create a mock database that implements the database interface
+       and use it to test your class. This way, you can test your class without having to connect to a real database.
+       which we called unit testing.

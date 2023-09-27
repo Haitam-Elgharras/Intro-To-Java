@@ -5,7 +5,11 @@ public class Main {
         video.setTitle("Jennifer's birthday");
         video.setUser(new User("john@domain.cm"));
 
-        var processor = new VideoProcessor(new VideoEncoder(),new VideoDatabase(),new EmailService());
+        var processor = new VideoProcessor(
+                new XVideoEncoder(),
+                new MongodbDatabase(),
+                new EmailService());
+
         processor.process(video);
     }
 }

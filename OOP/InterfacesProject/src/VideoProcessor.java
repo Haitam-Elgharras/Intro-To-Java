@@ -1,9 +1,9 @@
 public class VideoProcessor {
-    private CanEncodeVideo encoder;
-    private CanStore database;
-    private CanNotify service;
+    private VideoEncoder encoder;
+    private VideoDatabase database;
+    private NotificationService service;
 
-    public VideoProcessor(CanEncodeVideo encoder, CanStore database, CanNotify service) {
+    public VideoProcessor(VideoEncoder encoder, VideoDatabase database, NotificationService service) {
         this.encoder = encoder;
         this.database = database;
         this.service = service;
