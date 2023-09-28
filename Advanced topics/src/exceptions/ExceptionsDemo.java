@@ -73,10 +73,18 @@ public class ExceptionsDemo {
         }
 
         // Custom Exceptions
+//        try {
+//            account.withdraw(10);
+//        } catch (InsufficientFundsException e) {
+//            System.out.println(e.getMessage());
+//        }
+
+        // Exception Chaining
         try {
             account.withdraw(10);
-        } catch (InsufficientFundsException e) {
-            System.out.println(e.getMessage());
+        } catch (AccountException e) {
+            var cause = e.getCause();
+            System.out.println(cause.getMessage());
         }
     }
     public static void sayHello(String name) {

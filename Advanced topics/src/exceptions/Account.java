@@ -13,10 +13,17 @@ public class Account {
             throw new IOException();
     }
 
-    public void withdraw(float value) throws InsufficientFundsException
+    public void withdraw(float value) throws AccountException
     {
-        if(value > balance)
-            throw new InsufficientFundsException();
+        if(value > balance) {
+            System.out.println("Insufficient funds");
+//            throw new InsufficientFundsException();
+        }
+
+        // with exception chaining
+        if(value > balance) {
+            throw new AccountException(new InsufficientFundsException());
+        }
     }
 
 
