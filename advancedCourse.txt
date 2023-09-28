@@ -33,3 +33,7 @@
         instead we throw an exception.
       - Because using this approach can be noisy, we mustn't use it in all our methods and classes, instead we use it just
         when we get input from the user or from external sources. so at the boundary of our application.
+
+
+     * Exceptions channing : it's about throwing a general exception and pass the specific exception as a cause
+       in this way we can have a general exception of a class that throws all exceptions of this class.

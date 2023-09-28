@@ -9,11 +9,11 @@ public class GenericsDemo {
         list.add("a");
 
         // what happens at runtime ???
-        var number = list.get(0);
-        System.out.println(number);
-        System.out.println(number.getClass());
-        var string = list.get(1);
-        System.out.println(string);
-        System.out.println(string.getClass());
+//        var number = list.get(0);
+//        System.out.println(number);
+//        System.out.println(number.getClass());
+//        var string = list.get(1);
+//        System.out.println(string);
+//        System.out.println(string.getClass());
     }
 }
