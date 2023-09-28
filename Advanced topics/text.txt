@@ -15,3 +15,35 @@
           - when working with Integer for example we have which we called boxing and unboxing:
             Integer myIntValue = 56; boxing : the compiler will convert this to Integer.valueOf(56);
             int myInt = myIntValue; // unboxing : the compiler will convert this to myIntValue.intValue();
+
+
+### Constraints: we can use extends keyword to specify a type or an interface that the type must subclass of or
+    implement the interface we choose. we can use multiple bounds by using & operator. and T will be a bound type.
+
+
+
+### Generics under the hood:
+
+1. **Type Erasure Basics**:
+   - Generic types in Java provide type safety at compile-time. You can use placeholders like `T` to indicate that
+     a class or method can work with different types.
+   - However, at runtime, Java erases the generic type information. This means that the actual type parameter `T`
+     is replaced with its upper bound or with `Object` if there's no bound. This process is known as type erasure.
+
+2. **Erasure Replaces with Object**:
+   - When Java performs type erasure, it essentially replaces generic type parameters like `T` with the `Object` class.
+   - This is similar to non-generic code where you could store any object in a collection, but with generics, you gain
+     compile-time type checking.
+
+3. **Type Bounds and Constraints**:
+   - If you specify type bounds or constraints on your generic type, Java's type erasure replaces `T` with the bound type.
+   - For example, if you have a constraint like `<T extends Comparable<T>>`, then `T` will be replaced with `Comparable<T>`.
+     This means that your generic class or method works with objects that implement the `Comparable` interface.
+
+4. **Multiple Constraints**:
+   - If you have multiple type constraints on your generic type, Java chooses the leftmost constraint for type erasure.
+   - For instance, if you have `<T extends Serializable & Comparable<T>>`, `T` will be replaced with `Serializable`.
+
+    So, Java's generic type erasure is a mechanism to provide type safety at compile time while preserving
+    compatibility with older non-generic code at runtime. It replaces generic type parameters with their bounds or
+    with `Object`, and when there are multiple bounds, it selects the leftmost one during type erasure.
