@@ -1,8 +1,17 @@
 
 ### Generics : generics are used to create classes, interfaces and methods that take types as parameters.
-   *Note : we can't instantiate T type directly inside our generic class, because we don't know what type it is.
+   *Note1 : we can't instantiate T type directly inside our generic class, because we don't know what type it is.
         so we walk around this by : private T[] items = (T[]) new Object[10]; with that we perform:
         1. "Create an array of 10 memory spaces that can hold references to objects (initially set to null)."
         2. "I want to treat this array as if it's an array of type T, and I'll make sure that I only add elements of type T into it."
             This casting allows us to work with the array as if it's a generic array of type T, even though, under the hood, it's an
             array of Object references. It's a workaround to leverage arrays while dealing with Java's type erasure in generics.
+
+   *Note2 : we can't use primitives as generic type parameters, because generics are implemented using type erasure.
+            so we can't use int, double, char, boolean, float, long, short, byte, or any other primitive type as
+            a generic type parameter. we can use only reference types. Instead, we can use the wrapper classes for
+            these primitive types: Integer, Double, Character, Boolean, Float, Long, Short, Byte.
+
+          - when working with Integer for example we have which we called boxing and unboxing:
+            Integer myIntValue = 56; boxing : the compiler will convert this to Integer.valueOf(56);
+            int myInt = myIntValue; // unboxing : the compiler will convert this to myIntValue.intValue();
