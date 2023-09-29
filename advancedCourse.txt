@@ -114,3 +114,16 @@
 ### Multiple Type Parameters:
 1. We can declare multiple type parameters in a generic class or method.
 2. By convention, if we have two parameters, we use 'K' for the key and 'V' for the value.
+
+
+### Generic classes and inheritance:(generics are invariant)
+  - Imagine you have two classes, A and B, where B is a special type of A, meaning it inherits from A.
+    Now, you have a method called XMethod that can work with any generic class, let's call it D. But there's a
+    catch: D must be a generic class that takes A as a type parameter, which means XMethod accepts D<A>.
+
+    Here's the tricky part: Even though B is a "child" of A (B inherits from A), you can't use D<B> with XMethod.
+    It won't work because D<B> is not considered the same as D<A>, even though B is a type of A.
+
+    In simpler terms, just because B is like A, it doesn't mean D<B> is like D<A> when it comes to generic classes
+    and methods. It's a bit like having a specific tool for one job and trying to use it for a similar but not quite
+    the same job.

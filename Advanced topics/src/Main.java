@@ -1,9 +1,7 @@
 import exceptions.Account;
 import exceptions.AccountException;
 import exceptions.ExceptionsDemo;
-import generics.GenericsDemo;
-import generics.User;
-import generics.Utils;
+import generics.*;
 
 import java.io.IOException;
 
@@ -56,5 +54,22 @@ public class Main {
         System.out.println(max);
 
         Utils.map("key", 10);
+
+
+        // Generic classes and Inheritance
+
+        // 1. we can pass the specific class type or any of its derivatives
+        var user = new User(10);
+        var instructor = new Instructor(20);
+        Utils.printUser(user);
+        Utils.printUser(instructor);
+
+        // 2. instructor is a subtype of User doesn't mean that List<Instructor> is a subtype of List<User>
+        var users = new GenericList<User>();
+        Utils.printUsers(users);
+        // var instructors = new GenericList<Instructor>();
+        // Utils.printUsers(instructors); // compile time error
+
+
     }
 }
