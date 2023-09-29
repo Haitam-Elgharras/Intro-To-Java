@@ -47,3 +47,15 @@
     So, Java's generic type erasure is a mechanism to provide type safety at compile time while preserving
     compatibility with older non-generic code at runtime. It replaces generic type parameters with their bounds or
     with `Object`, and when there are multiple bounds, it selects the leftmost one during type erasure.
+
+
+ ### Type Erasure and bounds:
+ 1. We can't use `private T[] items = (T[]) new Object[10];` when working with bounded type parameters.
+ 2. The reason is that in Java, due to something called "type erasure," the actual type `T` gets replaced
+    by its bound type at runtime. In this case, the bound type is `Comparable`.
+ 3. Now, trying to cast `Object[]` to `Comparable[]` isn't allowed in Java. This restriction exists to ensure
+    type safety, preventing objects that are not comparable from sneaking into the array.
+ 4. Instead, we opt for a safer alternative: `private List<T> items = new ArrayList<>();`.
+ 5. Lists in Java aren't affected by the same type erasure limitations as arrays. So, using a `List<T>`
+    allows us to work with generic types, even when they have a specific bound type like `Comparable`,
+    in a way that's both safe and effective.

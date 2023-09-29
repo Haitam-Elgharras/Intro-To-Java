@@ -2,6 +2,7 @@ import exceptions.Account;
 import exceptions.AccountException;
 import exceptions.ExceptionsDemo;
 import generics.GenericsDemo;
+import generics.User;
 
 import java.io.IOException;
 
@@ -31,9 +32,21 @@ public class Main {
 
 
 
-        // Generics
+
 
 // Generics
         GenericsDemo.show();
+
+
+        // Comparable Interface
+        var user1 = new User(10);
+        var user2 = new User(20);
+
+        if (user1.compareTo(user2) < 0)
+            System.out.println("user1 < user2");
+        else if (user1.compareTo(user2) == 0)
+            System.out.println("user1 == user2");
+        else
+            System.out.println("user1 > user2");
     }
 }

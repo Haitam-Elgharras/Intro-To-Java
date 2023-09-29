@@ -1,5 +1,7 @@
 package generics;
 
+import java.util.ArrayList;
+
 public class GenericsDemo {
 
     public static void show() {
@@ -23,9 +25,11 @@ public class GenericsDemo {
 
         // Generic Constraints: when we've added the constraint <T extends Comparable> we can pass just the types that
         // implements the Comparable interface
-        var ComparableList1 = new GenericList<Integer>();
-        var ComparableList2 = new GenericList<String>();
-        // var ComparableList3 = new GenericList<Account>(); // Account doesn't implement Comparable interface
+        var comparableList1 = new GenericList<Integer>();
+        var comparableList2 = new GenericList<String>();
+//         var ComparableList3 = new GenericList<Account>(); // Account doesn't implement Comparable interface
+        comparableList1.add(1000);
+        System.out.println(comparableList1.get(0));
 
     }
 }
