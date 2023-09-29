@@ -127,3 +127,24 @@
     In simpler terms, just because B is like A, it doesn't mean D<B> is like D<A> when it comes to generic classes
     and methods. It's a bit like having a specific tool for one job and trying to use it for a similar but not quite
     the same job.
+
+
+### Wildcards:
+  - To solve the problem of invariant generic classes and methods, Java introduced wildcards. Wildcards are a way to
+    tell the compiler that a generic type can be of any type, even if it's a subclass of another type. and we can use
+    wildcards in three ways:
+    1. Upper Bounded Wildcards: `<? extends T>` : it means that the type parameter can be any type that is a subtype of T.
+       we use it to read from a generic type.
+    2. Lower Bounded Wildcards: `<? super T>` : it means that the type parameter can be any type that is a supertype of T.
+       we use it to write to a generic type.
+    3. Unbounded Wildcards: `<?>` : it means that the type parameter can be any type. we use it when we want to accept
+       any type of generic type.
+
+  ** Summary of the four cases:
+  Case 1: Specific to User, no wildcards.
+  Case 2: Unbounded wildcard (<?>), read-only, can't add elements.
+  Case 3: Upper bounded wildcard (<? extends User>), read-only, can't add elements, but accepts any subtype of User.
+  Case 4: Lower bounded wildcard (<? super User>), write-only (for User or its superclasses), read as Object.
+  The choice of which wildcard to use depends on the flexibility and constraints of the method. Unbounded wildcards
+  (<?>) provide the most flexibility but are read-only, while upper and lower bounded wildcards offer more specific constraints
+  but with limitations on adding elements or retrieving specific types.

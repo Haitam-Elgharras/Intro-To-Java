@@ -67,8 +67,19 @@ public class Main {
         // 2. instructor is a subtype of User doesn't mean that List<Instructor> is a subtype of List<User>
         var users = new GenericList<User>();
         Utils.printUsers(users);
-        // var instructors = new GenericList<Instructor>();
+        //var instructors = new GenericList<Instructor>();
         // Utils.printUsers(instructors); // compile time error
+
+
+        // 3. Wildcards
+        Utils.printAny(users);
+        Utils.printUserOrSub(users);
+        Utils.printUserOrPar(users);
+
+//        var instructors = new GenericList<Instructor>();
+//        Utils.printAny(instructors); // compile time error
+//        Utils.printUserOrSub(instructors);
+        //Utils.printUserOrPar(instructors);
 
 
     }
