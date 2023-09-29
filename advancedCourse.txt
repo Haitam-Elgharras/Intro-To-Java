@@ -104,3 +104,13 @@
  5. Lists in Java aren't affected by the same type erasure limitations as arrays. So, using a `List<T>`
     allows us to work with generic types, even when they have a specific bound type like `Comparable`,
     in a way that's both safe and effective.
+
+
+### Generic Methods:
+1. Generic methods are methods that introduce their own type parameters.
+2. We can declare generic methods inside a non-generic class.
+3. They give us type safety and code reusability.
+
+### Multiple Type Parameters:
+1. We can declare multiple type parameters in a generic class or method.
+2. By convention, if we have two parameters, we use 'K' for the key and 'V' for the value.

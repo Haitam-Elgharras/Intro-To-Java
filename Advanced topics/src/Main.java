@@ -3,6 +3,7 @@ import exceptions.AccountException;
 import exceptions.ExceptionsDemo;
 import generics.GenericsDemo;
 import generics.User;
+import generics.Utils;
 
 import java.io.IOException;
 
@@ -48,5 +49,12 @@ public class Main {
             System.out.println("user1 == user2");
         else
             System.out.println("user1 > user2");
+
+
+        // Generic methods
+        var max = Utils.max(user1, user2);
+        System.out.println(max);
+
+        Utils.map("key", 10);
     }
 }
