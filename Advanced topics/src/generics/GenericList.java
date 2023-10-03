@@ -1,5 +1,4 @@
 package generics;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -14,6 +13,7 @@ public class GenericList<T extends Comparable<T>> {
         items.add(item);
     }
     public T get(int index) {
-       return items.get(index);
+        return items.get(index);
     }
+
 }

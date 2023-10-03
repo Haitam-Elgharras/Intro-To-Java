@@ -13,7 +13,7 @@
             these primitive types: Integer, Double, Character, Boolean, Float, Long, Short, Byte.
 
           - when working with Integer for example we have which we called boxing and unboxing:
-            Integer myIntValue = 56; boxing : the compiler will convert this to Integer.valueOf(56);
+            Integer myIntValue = 56; boxing : the compiler will convert this to new Integer.valueOf(56);
             int myInt = myIntValue; // unboxing : the compiler will convert this to myIntValue.intValue();
 
 
@@ -51,7 +51,7 @@
 
  ### Type Erasure and bounds:
  1. We can't use `private T[] items = (T[]) new Object[10];` when working with bounded type parameters.
- 2. The reason is that in Java, due to something called "type erasure," the actual type `T` gets replaced
+ 2. The reason is that in Java, due to "type erasure," the actual type `T` gets replaced
     by its bound type at runtime. In this case, the bound type is `Comparable`.
  3. Now, trying to cast `Object[]` to `Comparable[]` isn't allowed in Java. This restriction exists to ensure
     type safety, preventing objects that are not comparable from sneaking into the array.
