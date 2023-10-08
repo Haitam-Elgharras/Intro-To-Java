@@ -87,9 +87,9 @@
 
     # Method Overriding:
      Method overriding is a feature that allows a subclass or child class to provide a specific implementation of a method
-        that is already provided by one of its superclasses or parent classes. When a method in a subclass has the same name,
-        same parameters or signature, and same return type(or sub-type) as a method in its super-class, then the method in the
-        subclass is said to override the method in the super-class.
+     that is already provided by one of its superclasses or parent classes. When a method in a subclass has the same name,
+     same parameters or signature, and same return type(or sub-type) as a method in its super-class, then the method in the
+     subclass is said to override the method in the super-class.
 
 
     # Upcasting and Downcasting (generalization and specification)
@@ -116,7 +116,7 @@
         - an abstract method is a method that is declared without an implementation (without braces, and
         followed by a semicolon), like this: abstract void moveTo(double deltaX, double deltaY); If a class includes abstract
         methods, then the class itself must be declared abstract, as in: public abstract class GraphicObject { // declare fields
-        // declare nonabstract methods abstract void draw(); }
+        // declare abstract methods abstract void draw(); }
        - an abstract method must obligatorily be overridden in the subclass, or else the subclass must also be declared abstract
         and it's the responsibility of the next subclass to override the abstract method.
 
@@ -125,6 +125,8 @@
     1.  A final class is a class that cannot be extended or subclassed. You cannot create a subclass of a final class.
     It is often used when you want to prevent any further specialization or inheritance of a class.
     Final classes are sometimes used for security or optimization reasons, and they are often found in core Java classes like String and Integer.
+    -security: if you have a class that contains sensitive information, you can make it final to prevent other classes from extending it.
+    -optimization: if you have a class that you know will never be extended, you can make it final to improve performance.
 
     2. A final method is a method that cannot be overridden by subclasses. When you declare a method as final,
        it means that no subclass can provide a different implementation for that method.

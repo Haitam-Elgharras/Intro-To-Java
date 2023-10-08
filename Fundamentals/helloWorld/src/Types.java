@@ -34,12 +34,20 @@ public class Types {
         point1.x = 2;
         System.out.println(point2);// point2.x is 2
 
-        // strings are reference types but they are immutable
+        // About Strings:
+        // strings are reference types but they are immutable ( for the String class)
+        // we have other classes that are mutable like StringBuilder and StringBuffer
+        // the difference between them is that StringBuffer is thread safe
+
         // String message = new String("Hello World"); but we use a shortcut
+        // Note for string : if we declare two vars with the shortcut with the same value
+        // they will have the same memory location
+        // but if we change one of them they will be diff ( learn string pool)
         String message = "Hello World";
         message=message+"!!"; // this creates a new string
 
         // any method that seems to change a string actually returns a new string
+        String[] str =message.split(" "); // ["Hello","world"]
         message.endsWith("!!");// returns true
         message.startsWith("!!");// returns false
         message.length();// returns 13
@@ -49,6 +57,7 @@ public class Types {
         message.toLowerCase();// returns hello world!!
         message.toUpperCase();// returns HELLO WORLD!!
         message.trim();// deletes the white spaces at the beginning and the end of the string
+        message.substring(1,4);// 4 not included
 
         // escape sequences
         String escape = "Hello \"Haitam\""; // returns Hello "Haitam"

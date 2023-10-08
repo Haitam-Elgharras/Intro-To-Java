@@ -28,11 +28,11 @@
        so we need to start with more specific exception and then follow it with more general exception.
 
      * Defencive Programming : we mustn't handle all exceptions.
-       -in some exception we mustn't handle them cause they must be corrected by programmer.for example if we have a
-        NullPointerException it means that we have a bug in our code, and we must correct it. so we mustn't handle it.
-        instead we throw an exception.
+       -In some exception we mustn't handle them cause they must be corrected by programmer.for example if we have a
+        NullPointerException it means that we have a bug in our code, and we must correct it. So we mustn't handle it.
+        Instead we throw an exception.
       - Because using this approach can be noisy, we mustn't use it in all our methods and classes, instead we use it just
-        when we get input from the user or from external sources. so at the boundary of our application.
+        when we get input from the user or from external sources. So at the boundary of our application.
 
 
      * Exceptions channing : it's about throwing a general exception and pass the specific exception as a cause
