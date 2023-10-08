@@ -1,0 +1,39 @@
+
+Lambdas:
+
+    1- Functional interface: is an interface that has only one abstract method. and it can have any number of default methods.
+
+    2- Anonymous Inner Class: is a class that has no name and is used to instantiate an object with the help of a class or an interface.
+       it's when we need to use an object that implements an interface but we don't want to create a entire class for it.
+       * this represents the current object of the anonymous inner class.
+
+    3- Lambda Expression: is a short block of code which takes in parameters and returns a value. Lambda expressions are similar to methods,
+       but they do not need a name and they can be implemented right in the body of a method.
+      * We use a lambda exp if we've a functional interface. otherwise we use an anonymous inner class cause we need to implement
+        multiple methods.
+      * we can access local variables of the method and also the fields(instance or class) when using lambda exp.
+      * The this in a lambda exp represents the this of object of the enclosing class(that we create the lambda exp in it).
+
+
+The differences between Inner class and Lambda exp:
+1- Inner class can have multiple methods but lambda exp represents only one method.
+2- Inner class can have state(instance variables) but lambda exp can't have state.
+3- Inner class can have constructor but lambda exp can't have constructor.
+4- this in inner class represents the object of the inner class but this in lambda exp represents the object of the enclosing class.
+5- lambda exp for functional interface and inner class for any interface.
+
+
+Method Reference:
+1- Method reference is used to refer method of functional interface.
+2- It is compact and easy form of lambda expression.
+3- Each time when you are using lambda expression to just referring a method, you can replace your lambda expression with method reference.
+4- The java compiler will take care of the parameters of the method, by passing them automatically.
+
+
+Built-in Functional Interfaces:
+  1- Consumer<T>: Represents an operation that accepts a single input argument and returns no result. same examples are
+       forEach() method of Iterable interface accept a Consumer object and then perform operation on each element of Iterable.
+
+
+
+
