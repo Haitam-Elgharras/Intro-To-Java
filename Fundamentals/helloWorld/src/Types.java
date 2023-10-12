@@ -35,7 +35,7 @@ public class Types {
         System.out.println(point2);// point2.x is 2
 
         // About Strings:
-        // strings are reference types but they are immutable ( for the String class)
+        // strings are reference types but they are immutable (for the String class)
         // we have other classes that are mutable like StringBuilder and StringBuffer
         // the difference between them is that StringBuffer is thread safe
 

@@ -27,12 +27,13 @@ public class ConsumerDemo {
 
         // Chain Consumers ###########
         List<String> list2 = List.of("baby","shark","doo");
-        Consumer<String> print = item -> System.out.println(item);
+        Consumer<String> print = System.out::println;
         Consumer<String> printUpperCase = item -> System.out.println(item.toUpperCase());
         list2.forEach(print.andThen(printUpperCase));
-
+        System.out.println("###########");
         // under the hood it's converting the above to one lambda expression
          list2.forEach(item -> { print.accept(item); printUpperCase.accept(item); });
+
 
     }
 }

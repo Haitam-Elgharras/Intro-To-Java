@@ -2,7 +2,10 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/ConjugueurProject/ConjugueurProject.iml" filepath="$PROJECT_DIR$/ConjugueurProject/ConjugueurProject.iml" />
       <module fileurl="file://$PROJECT_DIR$/Java-Exercices.iml" filepath="$PROJECT_DIR$/Java-Exercices.iml" />
+      <module fileurl="file://$PROJECT_DIR$/LibraryManagement/LibraryManagement.iml" filepath="$PROJECT_DIR$/LibraryManagement/LibraryManagement.iml" />
+      <module fileurl="file://$PROJECT_DIR$/QcmProject/QcmProject.iml" filepath="$PROJECT_DIR$/QcmProject/QcmProject.iml" />
     </modules>
   </component>
 </project>

@@ -45,17 +45,17 @@ public class App {
         var employee4 = new Employee(50_000);
 
 
-        // static members : They are the members which are not tied to a specific object(class level)
+        // static members: They are the members that are not tied to a specific object(class level)
         // we can access them without creating an object
         Employee.printNumberOfEmployees(); // 4
 
 
-        // Inheritance : we can reuse the code of the parent class
+        // Inheritance: we can reuse the code of the parent class
         var control = new TextBox();
         System.out.println(control.isEnabled());// true
     
 
-        // Method overriding : we can change the behavior of the parent class
+        // Method overriding: we can change the behavior of the parent class
         var control2 = new TextBox();
         control2.setText("Method overriding");
         System.out.println(control2.toString());// Method overriding

@@ -2,6 +2,7 @@
 Lambdas:
 
     1- Functional interface: is an interface that has only one abstract method. and it can have any number of default methods.
+       abstract method here means a method that doesn't a body.
 
     2- Anonymous Inner Class: is a class that has no name and is used to instantiate an object with the help of a class or an interface.
        it's when we need to use an object that implements an interface but we don't want to create a entire class for it.
@@ -31,9 +32,44 @@ Method Reference:
 
 
 Built-in Functional Interfaces:
-  1- Consumer<T>: Represents an operation that accepts a single input argument and returns no result. same examples are
+  1- Consumer<T>: Represents an operation that accepts a single input argument and returns no result. some examples are
        forEach() method of Iterable interface accept a Consumer object and then perform operation on each element of Iterable.
 
+2- Supplier<T>: Represents a supplier of results. it returns a result of type T and does not accept any argument.
+       some examples are get() method of List interface accept a Supplier object and then return a value.
+    * Note that the returned value is not generated until we explicitly call get() method.
+    * When dealing with primitive types it's better to use primitive functional interfaces like IntSupplier, DoubleSupplier, LongSupplier.
+
+3- Function<T, R>: Represents a function that accepts one argument and produces a result.
+       We have some specialized versions of this interface like.
+       IntFunction<R>: Represents a function that accepts an int-valued argument and produces the parameterized result.
+       ToDoubleFunction<T>: Represents a function that accepts an object of type T and produces a double-valued result.
+       IntToLongFunction: Represents a function that accepts an int-valued argument and produces a long-valued result.
+
+
+4- Predicate<T>: Represents a predicate (boolean-valued function) of one argument.
+         We have some specialized versions of this interface like.
+         IntPredicate: Represents a predicate (boolean-valued function) of one int-valued argument.
+         DoublePredicate: Represents a predicate (boolean-valued function) of one double-valued argument.
+         BiPredicate<T, U>: Represents a predicate (boolean-valued function) of two arguments.
 
 
 
+
+
+ ** BinaryOperator<T>: Represents an operation upon two operands of the same type, producing a result of the same type as the operands.
+    * It's a specialization of BiFunction<T, T, T> for the case where the operands and the result are all of the same type.
+    * It's a functional interface whose functional method is apply(Object o1, Object o2).
+
+    ** UnaryOperator<T>: Represents an operation on a single operand that produces a result of the same type as its operand.
+       * It's a specialization of Function<T, T> for the case where the operand and result are of the same type.
+       * It's a functional interface whose functional method is apply(Object o1).
+
+
+ ############################ Summary ############################
+ - Functional interface is an interface that has only one abstract method.
+ - Anonymous inner class is a class that has no name and is used to instantiate an object with the help of a class or an interface.
+ - Lambda expression is a short block of code which takes in parameters and returns a value.
+ - Method reference is used to refer method of functional interface.
+ - we see that we have 4 types of functional interfaces: Consumer, Supplier, Function, Predicate.
+ - we can use compose() and andThen() methods to build complex functions.

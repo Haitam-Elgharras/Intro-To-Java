@@ -75,7 +75,7 @@
     1. Private: We can access the private modifier only within the same class and not from outside the class.
 
     2. Default: We can access the default modifier only within the same package and not from outside the package even from
-     the child class.And also,if we do not specify any access modifier it will automatically consider it as default.
+     the child class.And also,if we do not specify any access modifier, it will automatically consider it as default.
 
     3. Protected: We can access the protected modifier within the same package and also from outside the package with the help
      of the child class. If we do not make the child class, we cannot access it from outside the package. So inheritance is
@@ -83,6 +83,16 @@
 
     4. Public: We can access the public modifier from anywhere. We can access public modifiers from within the class
        as well as from outside the class and also within the package and outside the package.
+
+    # Static members: static members are shared among all instances of a class. They are created when the class is loaded
+      into memory and destroyed when the class is unloaded. They are accessed using the class name instead of an object
+      reference. Static members can be accessed from outside the class using the class name and from inside the class
+      using the this keyword.
+      * We can access via instance name, but it's not recommended in terms of readability and misleading.
+      * W can't access non-static members from static context, but we can access static members from non-static context.
+
+    # Static Blocks: Static blocks are used to initialize static variables. They are executed when the class is loaded into memory.
+      They are executed before the main method, and they are executed in the order they appear in the code.
 
 
     # Method Overriding:

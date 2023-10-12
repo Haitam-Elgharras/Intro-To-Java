@@ -4,6 +4,10 @@ public class Main {
         LambdasDemo.show();
 
         System.out.println("################Built-in Functional Interfaces################");
+        System.out.println("################Consumers################");
         ConsumerDemo.show();
+        System.out.println("################Suppliers################");
+        SupplierDemo.show();
+
     }
 }
