@@ -7,7 +7,7 @@ public class SupplierDemo {
         Supplier<Double> getRand = () -> Math.random() * 10;
         System.out.println(getRand.get());
 
-        DoubleSupplier sup = () -> Math.random();
+        DoubleSupplier sup = Math::random;
         System.out.println(sup.getAsDouble());
 
         System.out.println("########### Function Interface ###########");
@@ -27,7 +27,7 @@ public class SupplierDemo {
         Function<String, String> replaceColonAndBraces = replaceColon.andThen(addCurlyBraces);
         for (var item : map)
             System.out.println(replaceColonAndBraces.apply(item));
-        // Using compose method: it do the same thing as andThen but in reverse order
+        // Using compose method: it does the same thing as andThen but in reverse order
         Function<String, String> replaceColonAndBraces2 = addCurlyBraces.compose(replaceColon);
         for (var item : map)
             System.out.println(replaceColonAndBraces2.apply(item));
@@ -36,7 +36,7 @@ public class SupplierDemo {
         // Predicate
         System.out.println("########### Predicate Interface ###########");
         Predicate<String> isLongerThan5 = str -> str.length() > 5;
-        System.out.println(isLongerThan5.test("Hello World"));
+        System.out.println(isLongerThan5.test("Hello World"));// true
 
         // Combining Predicates
         Predicate<String> hasLeftBrace = str -> str.startsWith("{");

@@ -1,0 +1,83 @@
+
+
+##### Streams #####
+    - Streams are introduced in Java 8 and they allow us to process a collection of data in a declarative or
+      more accurately functional way.
+    - unlike imperative programming, functional programming is a declarative programming paradigm but with some more additional
+      features like immutability, higher order functions, lazy evaluation, etc. where we define just what
+      should be done and not how it should be done.(like SQL is a declarative language).
+
+    - Must stream's functions return a new pipeline(stream), so we can call another function on it.
+    - we have two operations in streams, intermediate and terminal operations.
+      1- Intermediate operations are lazy, they are not executed until a terminal operation is invoked.
+      2- Terminal operations are eager, they are executed immediately and consume the stream.
+
+
+1- slicing : filter, distinct, limit, skip, takeWhile, dropWhile
+    * filter : filter elements based on a predicate
+    * distinct : remove duplicate elements
+    * limit : limit the number of elements
+    * skip : skip the number of elements
+    * takeWhile : take elements while a predicate is true
+    * dropWhile : drop elements while a predicate is true
+
+    - The difference between takeWhile and filter is that takeWhile stops when the predicate is false even if there are more elements
+      that satisfy the predicate, while filter checks all the elements and returns the ones that satisfy the predicate.
+
+
+2- peeking: In a stream with multiple operations, like filter, map, and peek, each element is processed one at a time. The peek operation
+ allows you to "peek" at each element as it passes through the stream pipeline, which is why it prints each element separately.
+ This is helpful for debugging and understanding the step-by-step processing of elements in the stream.
+
+
+3- Reducers: are terminal operations that reduce the stream to a single value.
+    * count : count the number of elements
+    * min : find the minimum element
+    * max : find the maximum element
+    * findFirst : find the first element
+    * findAny : find any element
+    * anyMatch : check if any element matches a predicate returns boolean
+    * allMatch : check if all elements match a predicate
+    * noneMatch : check if no elements match a predicate
+    * reduce : combine all elements into a single value
+    * collect : collect elements into a collection.
+
+
+4- Mappers: are intermediate operations that transform each element in the stream.
+    * map : transform each element to another value
+    * flatMap : transform each element to a stream and then flatten the streams into a single stream.
+    * mapToInt : transform each element to an int value
+    * mapToLong : transform each element to a long value
+    * mapToDouble : transform each element to a double value
+    * boxed : transform each element to a boxed value
+    * asLongStream : transform each element to a long value
+    * asDoubleStream : transform each element to a double value
+    * asStream : transform each element to a stream
+
+5- Collectors: are terminal operations that collect the elements in the stream into a collection.
+    * Collectors.toList() : collect elements into a list
+    * Collectors.toSet() : collect elements into a set
+    * Collectors.toMap() : collect elements into a map
+    * Collectors.joining("delimiter") : collect elements into a string separated by a delimiter
+    * Collectors.counting() : count the number of elements
+    * Collectors.summingInt() : sum the elements as ints
+
+6- Grouping: is a collector that groups the elements in the stream by a property and returns a map of the grouping key and the elements.
+     The groupingBy collector has two overloaded versions, one that takes a classifier function and another that takes a classifier function
+     and a downstream collector so you can perform another operation on the grouped elements, like if you grouped movies by genre
+     and you want each genre to contain just the names of the movies we use collectors.mapping to map each movie to its name.
+
+
+7- Partitioning: is a collector that partitions the elements in the stream into two groups according to a predicate and returns a map of
+     the partition key (true or false) and the elements. The partitioningBy collector has two overloaded versions, one that takes a predicate
+     and another that takes a predicate and a downstream collector so you can perform another operation on the partitioned elements.
+    * The partitioningBy collector is a special case of the groupingBy collector where the grouping key is a boolean value.
+
+
+8- Primitive Type streams: if we are dealing with stream of integers it's better to use IntStream instead of normal stream
+    * IntStream : stream of ints
+    * LongStream : stream of longs
+    * DoubleStream : stream of doubles
+   All the things we can do with normal stream we can do with primitive type streams, but primitive type streams have some additional
+    operations that are specific to them like sum, average, range, etc.
+    for example : IntStream.range(1, 10).sum() // 45

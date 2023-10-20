@@ -131,16 +131,27 @@
         and it's the responsibility of the next subclass to override the abstract method.
 
 
-    # Final Classes and methods:
+
+    # Final Classes and methods, and fields:
     1.  A final class is a class that cannot be extended or subclassed. You cannot create a subclass of a final class.
     It is often used when you want to prevent any further specialization or inheritance of a class.
     Final classes are sometimes used for security or optimization reasons, and they are often found in core Java classes like String and Integer.
     -security: if you have a class that contains sensitive information, you can make it final to prevent other classes from extending it.
     -optimization: if you have a class that you know will never be extended, you can make it final to improve performance.
+     if we want to achive it with c++ we should make the constructor private, but in java we can make the class final.
 
     2. A final method is a method that cannot be overridden by subclasses. When you declare a method as final,
        it means that no subclass can provide a different implementation for that method.
        Final methods are commonly used to enforce a specific behavior in a class and prevent subclasses from altering that behavior.
+
+    3. A final field is a field that cannot be changed after it's initialized. When you declare a field as final, it will
+       be a constant, which means you can't change its value once it's initialized. Final fields are commonly used for
+       constants like PI, which should never change.
+
+
+       #### The difference between final, and abstract classes:
+         1. final classes can't be extended, but abstract classes can be extended.
+         2. final classes can't have abstract methods, but abstract classes can have abstract methods.
 
 
 
