@@ -1,0 +1,31 @@
+
+1- what is the difference between Threads and Processes?
+   * A process is an instance of a program, and in a process you can have multiple threads that share the same memory space,
+     and work together to achieve a common goal. like a web server that has multiple threads to handle multiple requests.
+     We can think of a process as an image of our code that has some memory and a bunch of other resources.
+
+   * Threads are a sequence of instructions, practically speaking, a thread is that thing that executes our code.
+     Threads are the smallest unit of execution that our OS can schedule.
+
+   * Most newer CPUs have many cores, and those cores can be used for running multiple processes or threads.
+
+
+2- Threads in java:
+   * is a sequence of instructions within a process that can be executed independently in a parallel way.
+   * Every thread has a priority. Threads with higher priority are executed in preference to threads with lower priority.
+   * in java we create a thread we start it, and then it runs until it finishes and it dies.
+
+   * the Thread class's static methods refer to the current thread
+
+   * Thread.sleep() method is used to pause the execution of current thread for specified time in milliseconds.
+     1 second = 1000 milliseconds.
+
+   * thread. join: The join method is also a method of the Thread class and is used to wait for another thread to finish its
+     execution. When a thread calls join on another thread, it will block until the joined thread completes. This is
+     useful for coordinating the execution of multiple threads
+
+
+ 3- Concurrency Issues:(To build multi-threaded applications)
+    * Thread safe code: is code that can be safely accessed by multiple threads, and will always behave the way it was intended to.
+    * Race condition: Multiple threads are racing to modify the same data at the same time.
+    * Visibility Problem: One thread is modifying data, and another thread is trying to read the same data.
