@@ -29,3 +29,12 @@
     * Thread safe code: is code that can be safely accessed by multiple threads, and will always behave the way it was intended to.
     * Race condition: Multiple threads are racing to modify the same data at the same time.
     * Visibility Problem: One thread is modifying data, and another thread is trying to read the same data.
+
+
+
+  ** ** ** Strategies for Thread Safety ** ** **
+
+  1- Confinement: Is the most simple strategy, the commune resource will be handled by a single thread. and each thread will
+     have its own copy of the resource to store its data. then we combine the results of all threads to get the final result.
+     like the example of the bank account, we can have a thread for each transaction, and each thread will hold the amount of
+     the transaction, and then we combine the results of all threads to get the final balance.

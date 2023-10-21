@@ -33,8 +33,8 @@ public class ThreadDemo {
 //        thread.interrupt();
 //    }
 
-    public static void show(){
-        System.out.println("#################### Race condition ####################");
+    public static void show() {
+  /*      System.out.println("#################### Race condition ####################");
         var status = new DownloadStatus();
         var threads = new ArrayList<Thread>();
         for (int i = 0; i < 10; i++) {
@@ -51,6 +51,34 @@ public class ThreadDemo {
             }
 
         System.out.println(status.getTotalBytes());
+
+    }*/
+
+        System.out.println("#################### Confinement ####################");
+        var threads = new ArrayList<Thread>();
+        var tasks = new ArrayList<DownloadFileTask>();
+
+        for (int i = 0; i < 10; i++) {
+            var task = new DownloadFileTask();
+            tasks.add(task);
+            var thread = new Thread(task);
+            thread.start();
+            threads.add(thread);
+        }
+
+        for (var thread : threads)
+            try {
+                thread.join();
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+
+        var totalBytes = tasks.stream()
+                .mapToInt(task -> task.getStatus().getTotalBytes())
+                .sum();
+
+        System.out.println(totalBytes);
+
 
     }
 
