@@ -9,6 +9,8 @@ public class DownloadStatus {
     private final Object totalBytesLock = new Object();
     private final Object totalFilesLock = new Object();
 
+    private volatile Boolean isDone = false;
+
 
 
     public void incrementTotalBytes() {
@@ -25,6 +27,10 @@ public class DownloadStatus {
         }
     }
 
+    public void done() {
+        isDone = true;
+    }
+
     public int getTotalBytes() {
         return totalBytes;
     }
@@ -32,5 +38,7 @@ public class DownloadStatus {
         return totalFiles;
     }
 
-
+    public boolean isDone() {
+        return isDone;
+    }
 }

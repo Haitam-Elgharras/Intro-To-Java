@@ -102,7 +102,7 @@ public class ThreadDemo {
         System.out.println(status.getTotalBytes());*/
 
 
-        System.out.println("#################### Synchronized ####################");
+     /*   System.out.println("#################### Synchronized ####################");
         var status = new DownloadStatus();
         var threads = new ArrayList<Thread>();
         for (int i = 0; i < 10; i++) {
@@ -120,10 +120,24 @@ public class ThreadDemo {
         }
 
         System.out.println(status.getTotalBytes());
+    }*/
 
 
-    }
+        System.out.println("#################### Volatile ####################");
+        var status = new DownloadStatus();
+        Thread thread1 = new Thread(new DownloadFileTask(status));
+        Thread thread2 = new Thread(() -> {
+            while (!status.isDone()) {
+            }
+            System.out.println(status.getTotalBytes());
+        });
+        thread1.start();
+        thread2.start();
 
 
 
+
+
+
+}
 }

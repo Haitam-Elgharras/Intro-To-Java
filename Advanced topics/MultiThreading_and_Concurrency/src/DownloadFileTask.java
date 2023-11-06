@@ -10,10 +10,11 @@ public class DownloadFileTask implements Runnable{
         System.out.println("Downloading a file: " + Thread.currentThread().getName());
 
         // Simulate a long download
-        for (var i = 0; i < 10_000; i++) {
+        for (var i = 0; i < 1_000_000; i++) {
             status.incrementTotalBytes();
         }
         System.out.println("Download complete: " + Thread.currentThread().getName());
+        status.done();
     }
 
 //    @Override
