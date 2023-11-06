@@ -8,6 +8,8 @@ import java.text.SimpleDateFormat;
 
 public class ExceptionsDemo {
     public static void show() throws IOException {
+        // checked exceptions: IOException, ParseException,
+        // any exception that inherits from Exception except RuntimeException
         try {
             var reader = new FileReader("file.txt");
             System.out.println("File opened");
@@ -28,6 +30,7 @@ public class ExceptionsDemo {
         }
 
         // to treat many exceptions in a generic way
+        // the first exception in the try block will be thrown
         try {
             var reader = new FileReader("file.txt");
             var value = reader.read();

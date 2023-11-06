@@ -54,7 +54,7 @@ public class ThreadDemo {
 
     }*/
 
-        System.out.println("#################### Confinement ####################");
+      /*  System.out.println("#################### Confinement ####################");
         var threads = new ArrayList<Thread>();
         var tasks = new ArrayList<DownloadFileTask>();
 
@@ -77,9 +77,32 @@ public class ThreadDemo {
                 .mapToInt(task -> task.getStatus().getTotalBytes())
                 .sum();
 
-        System.out.println(totalBytes);
+        System.out.println(totalBytes);*/
 
+
+
+        System.out.println("#################### Locks ####################");
+
+        var status = new DownloadStatus();
+        var threads = new ArrayList<Thread>();
+        for (int i = 0; i < 10; i++) {
+            var thread = new Thread(new DownloadFileTask(status));
+            thread.start();
+            threads.add(thread);
+        }
+
+        for (var thread : threads) {
+            try {
+                thread.join();
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+        }
+
+        System.out.println(status.getTotalBytes());
 
     }
+
+
 
 }
