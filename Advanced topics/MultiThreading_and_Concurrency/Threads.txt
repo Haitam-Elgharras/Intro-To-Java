@@ -42,3 +42,13 @@
      class. we can use the lock() method to acquire the lock, and then use the unlock() method to release the lock. this lock
      must be released in a finally block to make sure that it will be released even if an exception is thrown.
      * Locks are not recommended because we lose the multi-threading benefits, cause our code will run in a sequential way.
+
+
+  3- synchronized keyword: we can use the synchronized keyword to make sure that only one thread can access the resource at a time.
+     We can use it with a method or a block of code.
+   - When we use it with a method, it will lock the whole method, and when we use
+     it with a block of code, it will lock only the block of code. The second way is better cause it give us more control over the
+     locking process.
+   - We can use the synchronized keyword with any object. However, it is recommended to use it with a private final Object
+     cause if we use it we the object itself, so any synchronized block of code that uses the same object will be locked,
+     which causes unnecessary locking.
