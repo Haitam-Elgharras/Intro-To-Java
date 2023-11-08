@@ -123,7 +123,7 @@ public class ThreadDemo {
     }*/
 
 
-        System.out.println("#################### Volatile ####################");
+        /*System.out.println("#################### Volatile ####################");
         var status = new DownloadStatus();
         Thread thread1 = new Thread(new DownloadFileTask(status));
         Thread thread2 = new Thread(() -> {
@@ -132,6 +132,25 @@ public class ThreadDemo {
             System.out.println(status.getTotalBytes());
         });
         thread1.start();
+        thread2.start();*/
+
+        System.out.println("#################### wait and notify ####################");
+        var status = new DownloadStatus();
+        Thread thread1 = new Thread(new DownloadFileTask(status));
+        Thread thread2 = new Thread(() -> {
+            while (!status.isDone()) {
+                synchronized (status) {
+                    try {
+                        status.wait();
+                    } catch (InterruptedException e) {
+                        e.printStackTrace();
+                    }
+                }
+            }
+            System.out.println(status.getTotalBytes());
+        });
+
+        thread1.start();
         thread2.start();
 
 
@@ -139,5 +158,5 @@ public class ThreadDemo {
 
 
 
-}
+    }
 }

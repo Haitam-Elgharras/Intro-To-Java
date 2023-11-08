@@ -61,9 +61,36 @@
      and not from the cache memory, cause if we rely on the cache memory, the changes made by one thread may not be visible to others.
    - volatile keyword is used to mark a Java variable as "being stored in main memory".
    - it solves just the visibility problem and not the race condition problem.
-   - not that if the first thread completes before starting the 2nd thread, we will not have any problem, cause the 2nd thread
+   - note that if the first thread completes before starting the 2nd thread, we will not have any problem, cause the 2nd thread
      will read the value from the main memory, and not from the cache memory. even if the two threads are running writing above
      each other, cause the execution is rapid.
+
+  5- wait and notify keywords: we can use them if a thread wants to wait for another thread to change the state of a shared object.
+     it's helpful, unlike the infinite loop that we use to check the state of the shared object cause it consumes CPU resources.
+
+   - we must wrap the wait and notify keywords in a synchronized block of code.
+   - wait() method: causes the current thread to wait until another thread invokes the notify() method or the notifyAll() method
+     for this object.
+   - notify() method: wakes up a single thread that is waiting on this object's monitor.
+   - notifyAll() method: wakes up all threads that are waiting on this object's monitor.
+
+   /* When a thread invokes `wait()` inside a `synchronized` block, it temporarily releases the lock it holds (in this case,
+      the lock on the `status` object) and goes into a "waiting" state. This allows other threads to enter the `synchronized`
+      block and access the shared resource (in this case, the `status` object).
+
+      In your provided code, when `thread2` reaches the `status.wait()` line, it releases the lock on `status`, allowing other threads,
+      such as `thread1`, to enter the synchronized block and access the `status` object. `thread1` can then update the `status` object
+      and call `status.notifyAll()` when it's done.
+
+      The purpose of releasing the lock temporarily with `wait()` is to allow coordination between threads. It ensures that `thread1`
+      can notify `thread2` when the download is complete. When `thread2` is awakened from its wait state by `notifyAll()`, it will reacquire
+      the lock on `status` (if it's the next to be scheduled by the thread scheduler) and continue its execution, checking the `status` to see
+      if the download is complete.
+
+      So, in summary, when a thread is waiting using `wait()`, it temporarily releases the lock and allows other threads to enter
+      the synchronized block, but it can regain the lock when it's reawakened, ensuring proper synchronization and coordination between threads.
+      */
+
 
   6- atomic objects: Atomic operations allow multiple threads to access and modify data concurrently without the risk of data races.
        In Java, the increment operation a++ on a normal integer variable a is not an atomic operation. It involves three separate steps:
@@ -79,3 +106,4 @@
        *** Compare and Swap (CAS): The incremented value is written back to memory only if the original value has not been changed
            since it was loaded. If the value has been changed (by another thread), the operation is retried until it succeeds.
            This ensures that the increment operation is atomic.
+
