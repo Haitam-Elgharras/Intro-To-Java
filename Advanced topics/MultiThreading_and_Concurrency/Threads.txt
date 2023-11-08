@@ -64,3 +64,18 @@
    - not that if the first thread completes before starting the 2nd thread, we will not have any problem, cause the 2nd thread
      will read the value from the main memory, and not from the cache memory. even if the two threads are running writing above
      each other, cause the execution is rapid.
+
+  6- atomic objects: Atomic operations allow multiple threads to access and modify data concurrently without the risk of data races.
+       In Java, the increment operation a++ on a normal integer variable a is not an atomic operation. It involves three separate steps:
+       * Load: The current value of a is loaded from memory.
+       ** Increment: The loaded value is incremented by 1.
+       *** Store: The incremented value is stored back in memory.
+       These steps are not atomic, meaning they can be interrupted by other threads, which can lead to data inconsistency in
+       a multi-threaded environment1.
+
+       On the other hand, AtomicInteger’s incrementAndGet() method in Java provides an atomic increment operation. Here’s how it works:
+       * Load: The current value of the AtomicInteger is loaded from memory.
+       ** Increment: The loaded value is incremented by 1.
+       *** Compare and Swap (CAS): The incremented value is written back to memory only if the original value has not been changed
+           since it was loaded. If the value has been changed (by another thread), the operation is retried until it succeeds.
+           This ensures that the increment operation is atomic.
