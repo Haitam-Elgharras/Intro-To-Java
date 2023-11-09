@@ -92,13 +92,13 @@
       */
 
 
-  6- atomic objects: Atomic operations allow multiple threads to access and modify data concurrently without the risk of data races.
+  6- atomic objects (uses CAS): Atomic operations allow multiple threads to access and modify data concurrently without the risk of data races.
        In Java, the increment operation a++ on a normal integer variable a is not an atomic operation. It involves three separate steps:
        * Load: The current value of a is loaded from memory.
        ** Increment: The loaded value is incremented by 1.
        *** Store: The incremented value is stored back in memory.
        These steps are not atomic, meaning they can be interrupted by other threads, which can lead to data inconsistency in
-       a multi-threaded environment1.
+       a multithreaded environment.
 
        On the other hand, AtomicInteger’s incrementAndGet() method in Java provides an atomic increment operation. Here’s how it works:
        * Load: The current value of the AtomicInteger is loaded from memory.
@@ -106,4 +106,19 @@
        *** Compare and Swap (CAS): The incremented value is written back to memory only if the original value has not been changed
            since it was loaded. If the value has been changed (by another thread), the operation is retried until it succeeds.
            This ensures that the increment operation is atomic.
+
+
+  7- Adder Classes (uses striping): if we have multiple threads update a value frequently preferred Adders to atomic types.
+     Some key differences between adders and atomic types are:
+     some key differences:
+     Contended Scenarios:
+      Atomic Types: In scenarios where there is high contention (many threads accessing the same variable concurrently),
+      traditional atomic types might become a bottleneck due to frequent contention for the single underlying value.
+
+      Adders: Adders, especially LongAdder and DoubleAdder, are designed to reduce contention by spreading the updates across
+      multiple variables. Each thread has its own variables to update, and the final result is calculated by summing these variables.
+
+      adders like LongAdder are designed for even better performance than atomics in scenarios with high contention (many threads trying to update
+      the value concurrently). They use a different strategy, called "striping," where the updates are distributed across multiple
+      variables. This reduces contention, as each thread is more likely to update a different variable, minimizing the need for synchronization.
 

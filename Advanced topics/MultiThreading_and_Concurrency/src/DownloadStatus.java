@@ -1,22 +1,17 @@
+import java.util.concurrent.atomic.LongAdder;
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
 
 public class DownloadStatus {
-    private int totalBytes;
+    private LongAdder  totalBytes=  new LongAdder();
     private int totalFiles;
-    // it's just a convention to use object class as a lock
-    // we can use any object as a lock
-    private final Object totalBytesLock = new Object();
     private final Object totalFilesLock = new Object();
-
     private volatile Boolean isDone = false;
 
 
 
     public void incrementTotalBytes() {
-        synchronized (totalBytesLock) {
-            totalBytes++;
-        }
+        totalBytes.increment();
     }
 
     // if we use synchronized keyword in different methods, with the same object,
@@ -31,8 +26,8 @@ public class DownloadStatus {
         isDone = true;
     }
 
-    public int getTotalBytes() {
-        return totalBytes;
+    public int getTotalBytes(){
+        return totalBytes.intValue();
     }
     public int getTotalFiles() {
         return totalFiles;
