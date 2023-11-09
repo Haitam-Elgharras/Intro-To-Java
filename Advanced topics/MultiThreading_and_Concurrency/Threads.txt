@@ -125,3 +125,6 @@
   8- Collections.synchronizedCollection: (or synchronizedMap, synchronizedList, synchronizedSet) we can use it to make a collection
      thread safe. it's a wrapper class that wraps the collection and makes it thread safe. it uses the synchronized keyword to
      make sure that only one thread can access the resource at a time. we can use it with any collection.
+
+  9- Concurrent collections: more performant than synchronized collections. and they use different locks for different parts of the collection.
+     unlike synchronized collections that lock the whole collection.

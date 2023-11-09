@@ -1,7 +1,5 @@
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.Collections;
-import java.util.List;
+import java.util.*;
+import java.util.concurrent.ConcurrentHashMap;
 
 public class ThreadDemo {
 //    public static void show() {
@@ -177,5 +175,10 @@ public class ThreadDemo {
         }
 
         System.out.println(collection);
+
+
+        System.out.println("#################### Concurrent collections ####################");
+        Map<Integer, String> map = new ConcurrentHashMap<>();
+
     }
 }
