@@ -1,4 +1,7 @@
 import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Collections;
+import java.util.List;
 
 public class ThreadDemo {
 //    public static void show() {
@@ -134,7 +137,7 @@ public class ThreadDemo {
         thread1.start();
         thread2.start();*/
 
-        System.out.println("#################### wait and notify ####################");
+       /* System.out.println("#################### wait and notify ####################");
         var status = new DownloadStatus();
         Thread thread1 = new Thread(new DownloadFileTask(status));
         Thread thread2 = new Thread(() -> {
@@ -151,12 +154,28 @@ public class ThreadDemo {
         });
 
         thread1.start();
-        thread2.start();
+        thread2.start();*/
 
 
+        System.out.println("#################### Thread safe collections ####################");
+        Collection<Integer> collection = Collections.synchronizedCollection(new ArrayList<>());
+        var threadC1 = new Thread(() -> {
+            collection.addAll(List.of(1, 2, 3));
+        });
+        var threadC2 = new Thread(() -> {
+            collection.addAll(List.of(4, 5, 6));
+        });
 
+        threadC1.start();
+        threadC2.start();
 
+        try {
+            threadC1.join();
+            threadC2.join();
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
 
-
+        System.out.println(collection);
     }
 }

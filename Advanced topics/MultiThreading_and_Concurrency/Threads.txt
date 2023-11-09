@@ -122,3 +122,6 @@
       the value concurrently). They use a different strategy, called "striping," where the updates are distributed across multiple
       variables. This reduces contention, as each thread is more likely to update a different variable, minimizing the need for synchronization.
 
+  8- Collections.synchronizedCollection: (or synchronizedMap, synchronizedList, synchronizedSet) we can use it to make a collection
+     thread safe. it's a wrapper class that wraps the collection and makes it thread safe. it uses the synchronized keyword to
+     make sure that only one thread can access the resource at a time. we can use it with any collection.
