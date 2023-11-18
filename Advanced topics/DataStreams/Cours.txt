@@ -1,0 +1,11 @@
+
+
+Typical Usage:
+    FileReader/BufferedReader for reading textual data from files.
+    FileWriter/BufferedWriter for writing textual data to files.
+    FileInputStream/BufferedInputStream for reading binary data.
+    FileOutputStream/BufferedOutputStream for writing binary data.
+
+    Remember, while using these classes, ensure proper exception handling, especially when dealing
+    with file I/O operations as they can throw IOException. Additionally, it's good practice to close
+    the streams after use to release system resources and preferred to use try-with-resources statement

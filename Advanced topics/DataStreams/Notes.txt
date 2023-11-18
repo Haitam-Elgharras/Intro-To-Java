@@ -1,0 +1,53 @@
+
+
+    ##### Files in Java #####
+
+###### File Class ######
+
+ 1- relative path :
+    relative paths are resolved relative to the current working directory of the Java process. The current working
+    directory is the directory from which the Java application is launched. For example, if your Java application is
+    launched from the /home/user/myapp directory, and you use a relative path like "resources/file.txt", it will
+    refer to /home/user/myapp/resources/file.txt.
+
+
+
+    for file handling in Java, several classes are commonly used. Here's an overview of some key
+    classes and their functionalities:
+
+    1- For Character Input/Output:
+      1.1- FileReader / FileWriter: Reads/Writes data as characters. Recommended to be used for text files.
+         Not suitable for reading binary data.
+
+      1.2 - BufferedReader / BufferedWriter: Efficiently reads/writes text from/to a character-input stream. Buffers the
+        input, providing a more efficient reading of characters, lines, etc.
+
+    2- For Byte Input/Output:
+
+        2.1- FileInputStream / FileOutputStream: Reads/Writes data as bytes. Suitable for all kinds of files, both
+        text and binary. Works with byte-oriented I/O.
+
+        2.2 BufferedInputStream / BufferedOutputStream: Improves I/O performance by buffering data.
+
+        Additional Considerations:
+        InputStreamReader / OutputStreamWriter:
+
+        Bridge between byte streams and character streams.
+        Converts bytes to characters and vice versa.
+        PrintWriter / PrintStream:
+
+        Provides formatted output similar to the printf methods in PrintStream but for any OutputStream.
+        Primarily used for writing text to the file.
+        DataInputStream / DataOutputStream:
+
+        Reads and writes primitive data types from/to an underlying input stream as binary data.
+        Allows reading/writing Java's primitive data types.
+        RandomAccessFile:
+
+        Allows reading and writing files randomly (seek to a specific position within a file).
+        Supports both read and write operations.
+        Typical Usage:
+        FileReader/BufferedReader for reading textual data from files.
+        FileWriter/BufferedWriter for writing textual data to files.
+        FileInputStream/BufferedInputStream for reading binary data.
+        FileOutputStream/BufferedOutputStream for writing binary data.
