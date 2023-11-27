@@ -7,7 +7,7 @@
       features like immutability, higher order functions, lazy evaluation, etc. where we define just what
       should be done and not how it should be done.(like SQL is a declarative language).
 
-    - Must stream's functions return a new pipeline(stream), so we can call another function on it.
+    - Most streams functions return a new pipeline(stream), so we can call another function on it.
     - we have two operations in streams, intermediate and terminal operations.
       1- Intermediate operations are lazy, they are not executed until a terminal operation is invoked.
       2- Terminal operations are eager, they are executed immediately and consume the stream.

@@ -3,9 +3,14 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/Advanced topics.iml" filepath="$PROJECT_DIR$/Advanced topics.iml" />
+      <module fileurl="file://$PROJECT_DIR$/DataStreams/DataStreams.iml" filepath="$PROJECT_DIR$/DataStreams/DataStreams.iml" />
+      <module fileurl="file://$PROJECT_DIR$/DataStreams/EX1/EX1.iml" filepath="$PROJECT_DIR$/DataStreams/EX1/EX1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/DataStreams/EX2/EX2.iml" filepath="$PROJECT_DIR$/DataStreams/EX2/EX2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ExecutiveFramework/ExecutiveFramework.iml" filepath="$PROJECT_DIR$/ExecutiveFramework/ExecutiveFramework.iml" />
       <module fileurl="file://$PROJECT_DIR$/Lambdas/Lambdas.iml" filepath="$PROJECT_DIR$/Lambdas/Lambdas.iml" />
       <module fileurl="file://$PROJECT_DIR$/MultiThreading_and_Concurrency/MultiThreading_and_Concurrency.iml" filepath="$PROJECT_DIR$/MultiThreading_and_Concurrency/MultiThreading_and_Concurrency.iml" />
       <module fileurl="file://$PROJECT_DIR$/Streams/Streams.iml" filepath="$PROJECT_DIR$/Streams/Streams.iml" />
+      <module fileurl="file://$PROJECT_DIR$/MultiThreading_and_Concurrency/TP8/TP8.iml" filepath="$PROJECT_DIR$/MultiThreading_and_Concurrency/TP8/TP8.iml" />
       <module fileurl="file://$PROJECT_DIR$/collections/collections.iml" filepath="$PROJECT_DIR$/collections/collections.iml" />
     </modules>
   </component>

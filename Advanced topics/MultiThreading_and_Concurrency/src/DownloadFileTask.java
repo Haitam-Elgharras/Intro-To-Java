@@ -1,4 +1,4 @@
-public class DownloadFileTask implements Runnable{
+public class DownloadFileTask implements Runnable {
     private final DownloadStatus status;
 
     public DownloadFileTask(DownloadStatus status) {

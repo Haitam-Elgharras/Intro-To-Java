@@ -5,6 +5,8 @@ import java.io.Serializable;
 public class Product implements Serializable {
     private Long id;
     private String name;
+
+
     private double price;
 
     private double quantity;
@@ -13,6 +15,12 @@ public class Product implements Serializable {
         this.name = name;
         this.price = price;
     }
+
+
+    public long setId(long id) {
+        return this.id = id;
+    }
+
 
     public double getQuantity() {
         return quantity;
@@ -37,4 +45,18 @@ public class Product implements Serializable {
     public void setPrice(double price) {
         this.price = price;
     }
+
+    public long getId() {
+        return id;
+    }
+
+    @Override
+    public String toString() {
+       return "Product : \n"
+                +"Id: "+id +"\n"
+                +"Name: "+name+"\n"
+                +"Price: "+price+"\n"
+                +"Quantity: "+quantity+"\n";
+    }
+
 }

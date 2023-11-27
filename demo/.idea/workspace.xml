@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="dd230f5e-9b89-443e-b852-f33de0b948a5" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../Advanced topics/MultiThreading_and_Concurrency/Threads.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../Advanced topics/MultiThreading_and_Concurrency/Threads.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Advanced topics/MultiThreading_and_Concurrency/src/DownloadFileTask.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Advanced topics/MultiThreading_and_Concurrency/src/DownloadFileTask.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Advanced topics/MultiThreading_and_Concurrency/src/DownloadStatus.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Advanced topics/MultiThreading_and_Concurrency/src/DownloadStatus.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Advanced topics/MultiThreading_and_Concurrency/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Advanced topics/MultiThreading_and_Concurrency/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Advanced topics/MultiThreading_and_Concurrency/src/ThreadDemo.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Advanced topics/MultiThreading_and_Concurrency/src/ThreadDemo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Advanced topics/out/production/MultiThreading_and_Concurrency/DownloadFileTask.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Advanced topics/out/production/MultiThreading_and_Concurrency/DownloadFileTask.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Advanced topics/out/production/MultiThreading_and_Concurrency/DownloadStatus.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Advanced topics/out/production/MultiThreading_and_Concurrency/DownloadStatus.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Advanced topics/out/production/MultiThreading_and_Concurrency/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Advanced topics/out/production/MultiThreading_and_Concurrency/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Advanced topics/out/production/MultiThreading_and_Concurrency/ThreadDemo.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Advanced topics/out/production/MultiThreading_and_Concurrency/ThreadDemo.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Advanced topics/src/exceptions/ExceptionsDemo.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Advanced topics/src/exceptions/ExceptionsDemo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Java-Exercices/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Java-Exercices/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Java-Exercices/GestionCommande/src/Article.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Java-Exercices/GestionCommande/src/Article.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Java-Exercices/GestionCommande/src/Categorie.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Java-Exercices/GestionCommande/src/Categorie.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Java-Exercices/GestionCommande/src/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Java-Exercices/GestionCommande/src/Client.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Java-Exercices/GestionCommande/src/Commande.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Java-Exercices/GestionCommande/src/Commande.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Java-Exercices/GestionCommande/src/LigneCommande.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Java-Exercices/GestionCommande/src/LigneCommande.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Java-Exercices/GestionCommande/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Java-Exercices/GestionCommande/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../OOP/Classes/src/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/../OOP/Classes/src/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../OOP/Interfaces/src/TaxCalculator2023.java" beforeDir="false" afterPath="$PROJECT_DIR$/../OOP/Interfaces/src/TaxCalculator2023.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../advancedCourse.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../advancedCourse.txt" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 8
+}</component>
+  <component name="ProjectId" id="2XcKVpsY1KHTsmZathHQjqRW10P" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "main",
+    "ignore.virus.scanning.warn.message": "true",
+    "last_opened_file_path": "C:/Users/21263/OneDrive/Bureau/Mosh_courses/JavaFxMsEx",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RunManager">
+    <configuration name="HelloApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.example.demo.HelloApplication" />
+      <module name="demo" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.demo.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.HelloApplication" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="dd230f5e-9b89-443e-b852-f33de0b948a5" name="Changes" comment="" />
+      <created>1698922957059</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1698922957059</updated>
+      <workItem from="1698922958055" duration="3052000" />
+      <workItem from="1699191307941" duration="90000" />
+      <workItem from="1699191418565" duration="30000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>
