@@ -3,3 +3,18 @@
   The Executor framework in Java provides a higher-level approach to manage threads and tasks efficiently.
   It offers a simplified way to handle thread creation, task execution, and thread pool management, improving
   performance and simplifying error handling in multi-threaded applications.
+
+
+  1- Future Interface: In simple terms, a Future is like a box that will eventually contain the result of a
+  computation. You can check if the box is filled (isDone()), wait until the box is filled (get()), or even
+  cancel the filling of the box (cancel()). we can think of it like promise in javascript. If we return a value from
+  the callable, we will get a future object that will contain the result of the callable.
+
+   *Get: will block the thread until the result is available(like join)
+   *isDone: will return true if the result is available
+   *cancel: will cancel the task if it is not started yet
+
+   2- executor.submit and executor.execute:
+   * submit accepts callable and runnable, execute only accepts runnable.
+   * submit returns future object, execute returns void.
+
