@@ -19,7 +19,7 @@ public class Connection {
         mongoClient = MongoClients.create(connectionString);
     }
 
-    private static MongoClient getClient() {
+    public static MongoClient getClient() {
         if (mongoClient == null) {
             connect();
         }
