@@ -6,8 +6,8 @@ public class Main {
 
     public static void main(String[] args) {
         MongoDatabase db = Connection.getDatabase("test");
-        InsertDemo insertDemo = new InsertDemo(db);
+        CRUDDemo CRUDDemo = new CRUDDemo(db);
 //        insertDemo.insertOne();
-        insertDemo.insertMany();
+        CRUDDemo.insertMany();
     }
 }
