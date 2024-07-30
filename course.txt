@@ -9,22 +9,32 @@
 #some terms are closely related and are essential in Java development and execution
 
     1. **JDK (Java Development Kit):** The JDK is a software package that includes tools for developing Java applications. 
-        It contains the Java compiler (`javac`), libraries, and documentation. It is used by developers to create, compile, 
+        It contains the Java compiler (`javac`), debugger ('jdb'), libraries, and documentation. It is used by developers to create, compile, 
         and package Java programs.it contains all the functionality of JRE.
 
-    2. **JRE (Java Runtime Environment):** The JRE is a software package that includes the Java Virtual Machine (JVM) along
-        with libraries and runtime components. It is used for running Java applications. Users who want to run Java programs
-        install the JRE.
+    2. **JRE (Java Runtime Environment):** 
+    Role: The JRE provides the runtime environment required to run Java applications. It includes the JVM along with libraries and other components to execute Java programs.
+    Components:
+        JVM: Executes Java bytecode.
+        Core Libraries: Essential libraries (like java.lang, java.util) that Java programs need to run.
+        Supporting Files: Configuration files, property files, etc.
+    Scope: The JRE is a subset of the JDK. It allows you to run Java applications but does not include development tools like the compiler.
 
     3. **JVM (Java Virtual Machine):** The JVM is a part of both the JDK and JRE. It's responsible for interpreting Java bytecode
         on a computer. It converts(interprets or compiles) bytecode into native machine code, depending on the implementation. It ensures
         platform independence by allowing Java programs to run on different systems.
+        Scope: The JVM is platform-specific; different JVM implementations exist for different operating systems.
 
     4. **JIT (Just-In-Time) Compiler:** The JIT compiler is a component of the JVM. It translates Java bytecode into native
         machine code at runtime, right before execution. This optimization can improve the performance of Java applications.
 
     5. **Bytecode:** Bytecode is an intermediate representation of Java source code. It's a low-level set of instructions that
         the JVM can understand. Java source code is compiled into bytecode (.class files), which can be executed(interpreted) by the JVM.
+
+       # Visual Representation
+    JVM (inner most layer): Executes bytecode.
+    JRE (middle layer): JVM + Core Libraries + Supporting Files.
+    JDK (outer most layer): JRE + Development Tools(javac, jdb...) + Additional Libraries.
 
 
 # How java code gets executed
