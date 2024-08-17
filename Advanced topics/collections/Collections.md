@@ -1,7 +1,6 @@
 Collection Interface:
-
-    1- All collections implement the Iterable interface. so we can use the for-each loop to iterate over any collection object.
-    2- The Collection interface is the root interface of the Java collections framework. It declares the core methods that all collections will have.
+- All collections implement the Iterable interface. so we can use the for-each loop to iterate over any collection object.
+- The Collection interface is the root interface of the Java collections framework. It declares the core methods that all collections will have.
 
 
 List Interface :
@@ -65,25 +64,25 @@ List Interface :
 
      - You can use `Collections.sort()` with the appropriate `Comparator` to sort the list based on different criteria.
 
-    In summary, the choice between `Comparable` and `Comparator` depends on whether you want to define a single, natural
+- In summary, the choice between `Comparable` and `Comparator` depends on whether you want to define a single, natural
      order for your objects (use `Comparable`) or if you need flexibility to define multiple sorting criteria without
      modifying the class itself (use `Comparator`). `Comparator` is more flexible and allows you to adapt your sorting
      logic to different requirements.
 
 
 
-     *** Set Interface ***
+     ***Set Interface***
 
         1- A Set is a Collection that cannot contain duplicate elements.
         2- the Set does not guarantee the order of the elements.
 
 
-    *** Note : if a method accept a collection as a parameter, then it can accept any type sub type of collection.
+    ***Note*** : if a method accept a collection as a parameter, then it can accept any type sub type of collection.
         and also if the type inside this coll is <? extends String> then it can accept any type of collection that
         contains a sub type of String.
 
 
-    *** Maps:
+    ***Maps***:
     If you have a list of students and you want to find a student by their name, there are two common ways to do it:
     using a list or using a map.
 
@@ -97,10 +96,10 @@ List Interface :
     name, you directly access the student associated with that name in O(1) time complexity, which means it's very
     fast regardless of the number of students.
 
-    In summary, when you need to quickly find items by a specific identifier (like names in this case),
+    * In summary, when you need to quickly find items by a specific identifier (like names in this case),
     using a map (or HashMap) is a much more efficient choice compared to using a list. It's like having
     a super-fast index for your data.
 
-    3- Maps are part of the Java Collections Framework(java.util package). but it's not a part of the Iterable subclass
+    * Maps are part of the Java Collections Framework(java.util package). but it's not a part of the Iterable subclass
        so it's not a collection.
-    4- Must of the time we use the HashMap class as an implementation of the Map interface.
+    * Must of the time we use the HashMap class as an implementation of the Map interface.
